@@ -9,7 +9,8 @@ def main():
 
     print("Starting asteroids!")
 
-print(SCREEN_HEIGHT, SCREEN_WIDTH)
+    print(f"Screen width: {SCREEN_WIDTH} 
+          Screen height: {SCREEN_HEIGHT}")
 
     
 if __name__ == "__main__":
