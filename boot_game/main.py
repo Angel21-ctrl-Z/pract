@@ -13,13 +13,22 @@ def main():
 
     screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
 
+#setting up clock for FPS management
+    clock = pygame.time.Clock()
+    dt = 0
+    
+
 #display(game loop)
     while True:
+        #quit input check
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 return
+        #create black screen
         pygame.Surface.fill(screen,(0,0,0))
         pygame.display.flip()
+        #adjusting frames for better run
+        dt = clock.tick(60) / 1000
 
 #test runs
     print("Starting asteroids!")
