@@ -3,8 +3,10 @@ import pygame
 # the open-source pygame library
 # throughout this file
 
-from constants import *
+from constants import*
 #this area the values for the game.
+
+from player import*
 
 
 def main():
@@ -17,6 +19,8 @@ def main():
     clock = pygame.time.Clock()
     dt = 0
     
+#player spawn
+    player = Player(SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2)
 
 #display(game loop)
     while True:
@@ -26,6 +30,9 @@ def main():
                 return
         #create black screen
         pygame.Surface.fill(screen,(0,0,0))
+        #spawn
+        player.draw(screen)
+        #update screen
         pygame.display.flip()
         #adjusting frames for better run
         dt = clock.tick(60) / 1000
