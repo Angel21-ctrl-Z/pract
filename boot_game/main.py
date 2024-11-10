@@ -17,26 +17,33 @@ def main():
 
 #setting up clock for FPS management
     clock = pygame.time.Clock()
-   
+
+#group set
+    updatable = pygame.sprite.Group()
+    drawable = pygame.sprite.Group()
+
+    Player.containers = (updatable, drawable)
+
 #player spawn
     player = Player(SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2)
     
     dt = 0
+
     
-
-
 #display(game loop)
     while True:
         #quit input check
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 return
-        #player movement
-        player.update(dt)
+        #movement
+        for obj in updatable:
+            obj.update(dt)
         #create black screen
         screen.fill("black")
         #spawn
-        player.draw(screen)
+        for obj in drawable:
+            obj.draw(screen)
         #update screen
         pygame.display.flip()
         #adjusting frames for better run
