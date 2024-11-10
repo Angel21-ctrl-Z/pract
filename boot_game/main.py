@@ -17,10 +17,13 @@ def main():
 
 #setting up clock for FPS management
     clock = pygame.time.Clock()
-    dt = 0
-    
+   
 #player spawn
     player = Player(SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2)
+    
+    dt = 0
+    
+
 
 #display(game loop)
     while True:
@@ -28,14 +31,18 @@ def main():
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 return
+        #player movement
+        player.update(dt)
         #create black screen
-        pygame.Surface.fill(screen,(0,0,0))
+        screen.fill("black")
         #spawn
         player.draw(screen)
         #update screen
         pygame.display.flip()
         #adjusting frames for better run
         dt = clock.tick(60) / 1000
+        
+        
 
 #test runs
     print("Starting asteroids!")
