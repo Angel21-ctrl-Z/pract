@@ -8,6 +8,10 @@ from constants import*
 
 from player import*
 
+from asteroid import*
+
+from asteroidfield import*
+
 
 def main():
 
@@ -23,13 +27,23 @@ def main():
     drawable = pygame.sprite.Group()
 
     Player.containers = (updatable, drawable)
-
+    
 #player spawn
+
     player = Player(SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2)
+    
+#asteriods spawn
+    asteroids = pygame.sprite.Group()
+    
+    Asteroid.containers = (asteroids, updatable, drawable)
+
+    AsteroidField.containers = (updatable)
+
+    asteroidfield = AsteroidField()
     
     dt = 0
 
-    
+
 #display(game loop)
     while True:
         #quit input check
