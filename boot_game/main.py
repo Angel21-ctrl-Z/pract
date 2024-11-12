@@ -25,24 +25,23 @@ def main():
 #group set
     updatable = pygame.sprite.Group()
     drawable = pygame.sprite.Group()
+    asteroids = pygame.sprite.Group()
 
     Player.containers = (updatable, drawable)
+    Asteroid.containers = (asteroids, updatable, drawable)
+    AsteroidField.containers = (updatable)
     
 #player spawn
 
     player = Player(SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2)
     
+    
 #asteriods spawn
-    asteroids = pygame.sprite.Group()
     
-    Asteroid.containers = (asteroids, updatable, drawable)
+    asteroid_field = AsteroidField()
 
-    AsteroidField.containers = (updatable)
-
-    asteroidfield = AsteroidField()
-    
     dt = 0
-
+    
 
 #display(game loop)
     while True:
@@ -53,6 +52,11 @@ def main():
         #movement
         for obj in updatable:
             obj.update(dt)
+        #collision
+        for asteriod in asteroids:
+            if asteriod.collision(player):
+                print("Game Over")
+                sys.exit()
         #create black screen
         screen.fill("black")
         #spawn
