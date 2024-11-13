@@ -1,3 +1,4 @@
+import sys
 import pygame
 # this allows us to use code from
 # the open-source pygame library
@@ -12,6 +13,7 @@ from asteroid import*
 
 from asteroidfield import*
 
+from gun import*
 
 def main():
 
@@ -26,15 +28,17 @@ def main():
     updatable = pygame.sprite.Group()
     drawable = pygame.sprite.Group()
     asteroids = pygame.sprite.Group()
+    shots = pygame.sprite.Group()
 
     Player.containers = (updatable, drawable)
     Asteroid.containers = (asteroids, updatable, drawable)
     AsteroidField.containers = (updatable)
+    Gun.containers = (updatable, drawable, shots)
+    
     
 #player spawn
 
     player = Player(SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2)
-    
     
 #asteriods spawn
     
