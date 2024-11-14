@@ -61,6 +61,10 @@ def main():
             if asteriod.collision(player):
                 print("Game Over")
                 sys.exit()
+            for shot in shots:
+                if asteriod.collision(shot):
+                    asteriod.kill()
+                    shot.kill()    
         #create black screen
         screen.fill("black")
         #spawn
