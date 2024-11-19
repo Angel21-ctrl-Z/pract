@@ -7,13 +7,13 @@ import pygame
 from constants import*
 #this area the values for the game.
 
-from player import*
+from player import Player
 
-from asteroid import*
+from asteroid import Asteroid
 
-from asteroidfield import*
+from asteroidfield import AsteroidField
 
-from gun import*
+from gun import Gun
 
 def main():
 
@@ -60,6 +60,7 @@ def main():
             if asteriod.collision(player):
                 print("Game Over")
                 sys.exit()
+
             for shot in shots:
                 if asteriod.collision(shot):
                     asteriod.split()

@@ -2,9 +2,9 @@ import pygame
 
 import random
 
-from circleshape import*
+from circleshape import CircleShape
 
-from constants import*
+from constants import *
 
 class Asteroid(CircleShape):
 
@@ -26,6 +26,7 @@ class Asteroid(CircleShape):
 
         if self.radius <= ASTEROID_MIN_RADIUS:
             return
+        
         random_num = random.uniform(20, 50)
 
         Vect_1 = pygame.math.Vector2.rotate(self.velocity, random_num)
