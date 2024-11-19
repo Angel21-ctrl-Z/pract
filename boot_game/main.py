@@ -46,7 +46,6 @@ def main():
 
     dt = 0
     
-
 #display(game loop)
     while True:
         #quit input check
@@ -63,7 +62,7 @@ def main():
                 sys.exit()
             for shot in shots:
                 if asteriod.collision(shot):
-                    asteriod.kill()
+                    asteriod.split()
                     shot.kill()    
         #create black screen
         screen.fill("black")
