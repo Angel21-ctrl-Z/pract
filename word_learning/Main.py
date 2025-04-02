@@ -1,14 +1,15 @@
-from Meaning.Definition import definition
+from word_learning.Meaning.definition import Definition
 
-word = definition()
+word = Definition()# This is a placeholder for the word object
+                        # In real-world scenario, main will input the word.
 
 def main():
     print("\nWelcome to the Word Learning Program!")
     print("This program will help you learn new words and their meanings.\n")
-    word.Create()
+    word.create()
     
     print("Word added successfully!\n")
-    word.Output()
+    word.output()
     
     print("Thank you for using the Word Learning Program!")
 

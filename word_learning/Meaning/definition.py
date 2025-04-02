@@ -1,13 +1,14 @@
-class definition:
+class Definition:
     def __init__(self):
-        self.word = None
+        self.word = None # Main word object
+        # This is a placeholder for the word object.
         self.meaning = None
         self.example = None
 
 # This method is used to create a new word and its meaning.
     # Once the Input is received, it will format the word and its meaning for output.
-    def Create(self):
-        self.word = input("Enter a new word: ")
+    def create(self):
+        self.word = input("Enter a new word: ")# This line will be edit out to main.
         print(f"Word: {self.word}")
         
         self.meaning = input("Enter the meaning of the word: ")
@@ -20,7 +21,7 @@ class definition:
     # It will also store the word in a dictionary.
     # This is a placeholder method and needs to be implemented.
     # In a real-world scenario, this would save the word to a database or a file.
-    def Output(self):
+    def output(self):
         print(f"Word: {self.word}")
         print(f"Meaning: {self.meaning}")
         print(f"Example: {self.example}\n")
@@ -33,6 +34,6 @@ class definition:
         
 
 if __name__ == "__main__":
-    new_word = definition()
-    new_word.Create()
-    new_word.Output()
+    new_word = Definition()
+    new_word.create()
+    new_word.output()
