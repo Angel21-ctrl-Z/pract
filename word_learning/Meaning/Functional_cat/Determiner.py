@@ -4,7 +4,7 @@ import os
 class Determiner(FunctionalCat):
     def __init__(self):
         super().__init__()
-        self.pronoun_type = None
+        self.type = None
 
     def mark(self):
         print(self.function)
