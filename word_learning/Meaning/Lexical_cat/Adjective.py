@@ -8,5 +8,5 @@ class Adjective(LexicalCat):
         super().__init__()
         self.type = None
 
-    def describe(self):
+    def mark(self):
         print(self.lexical)

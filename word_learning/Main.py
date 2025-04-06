@@ -1,4 +1,4 @@
-from word_learning.Meaning.definition import Definition
+from Meaning.definition import Definition
 
 word = Definition()# This is a placeholder for the word object
                         # In real-world scenario, main will input the word.
