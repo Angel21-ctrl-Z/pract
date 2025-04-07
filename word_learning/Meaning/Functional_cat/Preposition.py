@@ -1,4 +1,4 @@
-from functional_cat import FunctionalCat
+from Meaning.functional_cat import FunctionalCat
 import os
 
 class Preposition(FunctionalCat):

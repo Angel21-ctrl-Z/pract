@@ -1,7 +1,10 @@
-from Meaning.definition import Definition
+import sys
+sys.path.append('/home/angel21h/Development/pract/word_learning')
 
-word = Definition()# This is a placeholder for the word object
-                        # In real-world scenario, main will input the word.
+from Meaning.Functional_cat.Pronoun import Pronoun  # Importing the Pronoun class from the functional_cat module
+
+word = Pronoun()  # Importing the Pronoun class from the Functional_cat module
+
 
 def main():
     print("\nWelcome to the Word Learning Program!")

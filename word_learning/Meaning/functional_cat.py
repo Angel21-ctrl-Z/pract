@@ -1,4 +1,4 @@
-from definition import Definition
+from Meaning.definition import Definition
 import os
 
 # This module is designed to handle functional categories of words.
@@ -11,6 +11,7 @@ class FunctionalCat(Definition):
         self.folder_path = "word_learning/Meaning/Functional_cat"
 
     def create(self):
+        
         FunctionalCat.is_it(self)
         super().create()
     
