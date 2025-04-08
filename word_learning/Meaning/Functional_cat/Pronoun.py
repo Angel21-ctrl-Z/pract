@@ -6,5 +6,8 @@ class Pronoun(FunctionalCat):
         super().__init__()
         self.type = None
 
+    def create(self):
+        super().create()
+        
     def mark(self):
         print(self.function)

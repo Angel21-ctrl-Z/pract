@@ -1,15 +1,17 @@
 import sys
 sys.path.append('/home/angel21h/Development/pract/word_learning')
+sys.path.append('/home/angel21v/Desktop/Development/pract/word_learning/Meaning')
 
-from Meaning.Functional_cat.Pronoun import Pronoun  # Importing the Pronoun class from the functional_cat module
+import Meaning.functional_cat as functional_cat
 
-word = Pronoun()  # Importing the Pronoun class from the Functional_cat module
+word = functional_cat.FunctionalCat()
 
 
 def main():
     print("\nWelcome to the Word Learning Program!")
     print("This program will help you learn new words and their meanings.\n")
-    word.create()
+    word.is_it()
+    word.get_function()
     
     print("Word added successfully!\n")
     word.output()
