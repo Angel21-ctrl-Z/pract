@@ -8,7 +8,7 @@ class FunctionalCat(Definition):
     def __init__(self):
         super().__init__()
         self.function = None
-        self.folder_path = "/home/angel21v/Desktop/Development/pract/word_learning/Meaning/Functional_cat"
+        self.folder_path = os.path.join(os.path.dirname(__file__), "Functional_cat")
 
     def create(self):
         super().create()
@@ -39,12 +39,9 @@ class FunctionalCat(Definition):
                 funcat_class = self.function_list[self.function]
                 funcat = funcat_class()
                 funcat.create()
-                funcat.mark()
             else:
                 print(f"{self.function} is not a valid functional category.")
-            
-            
-
+    
     def make_list(self):
         # This method will create a dictionary of functional categories from the folder
         self.function_list = {}
@@ -53,7 +50,7 @@ class FunctionalCat(Definition):
                 module_name = filename[:-3]  # Remove the ".py" extension
                 try:
                     # Dynamically import the module and get the class
-                    module = __import__(f"Functional_cat.{module_name}", fromlist=[module_name])
+                    module = __import__(f"Meaning.Functional_cat.{module_name}", fromlist=[module_name])
                     class_name = getattr(module, module_name.capitalize())
                     self.function_list[module_name.lower()] = class_name
                 except (ImportError, AttributeError) as e:
