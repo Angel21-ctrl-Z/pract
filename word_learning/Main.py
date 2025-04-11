@@ -31,7 +31,7 @@ def main():
     
     
     
-    print("Thank you for using the Word Learning Program!")
+    print("\nThank you for using the Word Learning Program!\n")
 
 def get_branches():
     line = input("Is it a functional, lexical, or both category? (f/l/b): ").strip().lower()
@@ -49,7 +49,6 @@ def get_branches():
         add_lexical.get_lexical()
     else:
         print("Invalid input. Please try again.")
-        return
     
 if __name__ == "__main__":
     main()
