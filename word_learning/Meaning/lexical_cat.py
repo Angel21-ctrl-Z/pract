@@ -40,7 +40,7 @@ class LexicalCat(Definition):
                 funcat = funcat_class()
                 funcat.create()
             else:
-                print(f"{self.function} is not a valid functional category.")
+                print(f"{self.lexical} is not a valid functional category.\n")
     
     def make_list(self):
         # This method will create a dictionary of functional categories from the folder
