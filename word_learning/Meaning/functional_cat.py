@@ -23,7 +23,7 @@ class FunctionalCat(Definition):
         # Check if the functional category is valid
         valid_categories = os.listdir(self.folder_path)
         valid_categories = [cat.lower() for cat in valid_categories if cat.endswith(".py") and cat != "__init__.py"]
-        print(f"Valid categories: {valid_categories}")
+        print(f"Valid categories: {valid_categories}\n")
 
         if self.function + ".py" in valid_categories:
             print(f"{self.function} is a valid functional category.\n")

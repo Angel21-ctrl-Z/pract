@@ -14,7 +14,7 @@ class LexicalCat(Definition):
         super().create()
     
     def output(self):
-        print(f"Category: {self.lexical}")
+        print(f"Lexical: {self.lexical}")
         super().output()
     
     def is_it(self):

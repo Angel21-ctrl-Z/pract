@@ -1,7 +1,6 @@
 class Definition:
     def __init__(self):
-        self.word = None # Main word object
-        # This is a placeholder for the word object.
+        self.word = None
         self.meaning = None
         self.example = None
         self.object = {}
@@ -23,6 +22,20 @@ class Definition:
     # In a real-world scenario, this would save the word to a database or a file.
     def output(self):
         print(f"Word: {self.object}")
+        # Verify if the file exists, if not, create it and add the new word.
+        file_path = "/home/angel21v/Desktop/Development/pract/word_learning/Meaning/words.txt"
+
+        try:
+            with open(file_path, "a+") as file:
+                file.seek(0)
+                content = file.read()
+                if self.word not in content:
+                    file.write(f"{self.word}: {self.object[self.word]}\n")
+                    print("Word added to the file.")
+                else:
+                    print("Word already exists in the file.")
+        except Exception as e:
+            print(f"An error occurred: {e}")
 
 # This method is used to check if the word is already in the dictionary.
     def is_it(self):
