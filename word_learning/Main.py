@@ -4,7 +4,7 @@ import Meaning.lexical_cat as lexical_cat
 add_function = functional_cat.FunctionalCat()
 add_lexical = lexical_cat.LexicalCat()
 
-# NOTE: Ensure that all related files are ready and the save folder is created before running this program.
+
 def main():
     print("\nWelcome to the Word Learning Program!")
     print("This program will help you learn new words and their meanings.\n")

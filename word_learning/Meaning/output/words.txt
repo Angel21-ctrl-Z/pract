@@ -1,0 +1,2 @@
+luck: {'meaning': 'luck', 'example': 'luck'}
+new: {'meaning': 'new', 'example': 'new'}

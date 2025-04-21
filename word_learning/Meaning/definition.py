@@ -21,9 +21,12 @@ class Definition:
     # This is a placeholder method and needs to be implemented.
     # In a real-world scenario, this would save the word to a database or a file.
     def output(self):
+        if not self.word:
+            print("No word has been created yet.")
+            return
         print(f"Word: {self.object}")
         # Verify if the file exists, if not, create it and add the new word.
-        file_path = "/home/angel21v/Desktop/Development/pract/word_learning/Meaning/words.txt"
+        file_path = "word_learning/Meaning/output/words.txt"
 
         try:
             with open(file_path, "a+") as file:
