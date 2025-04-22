@@ -39,6 +39,7 @@ class FunctionalCat(Definition):
                 funcat_class = self.function_list[self.function]
                 funcat = funcat_class()
                 funcat.create()
+                funcat.output()
             else:
                 print(f"{self.function} is not a valid functional category.")
     

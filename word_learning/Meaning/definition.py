@@ -24,7 +24,7 @@ class Definition:
         if not self.word:
             print("No word has been created yet.")
             return
-        print(f"Word: {self.object}")
+        print(f"\nWord: {self.object}")
         # Verify if the file exists, if not, create it and add the new word.
         file_path = "word_learning/Meaning/output/words.txt"
 
@@ -34,7 +34,7 @@ class Definition:
                 content = file.read()
                 if self.word not in content:
                     file.write(f"{self.word}: {self.object[self.word]}\n")
-                    print("Word added to the file.")
+                    print("\nWord added to the file.")
                 else:
                     print("Word already exists in the file.")
         except Exception as e:

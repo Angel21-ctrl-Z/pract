@@ -13,9 +13,6 @@ def main():
         if line == "add a word":
             print("Let's add a new word!\n")
             get_branches()
-            
-            add_function.output()
-            add_lexical.output()
 
         elif line == "view words":
             print("Viewing words is not implemented yet.\n")

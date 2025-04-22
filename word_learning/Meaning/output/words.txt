@@ -1,2 +1,8 @@
 luck: {'meaning': 'luck', 'example': 'luck'}
 new: {'meaning': 'new', 'example': 'new'}
+him: {'meaning': 'that guy', 'example': 'is all cause of him'}
+angel: {'meaning': 'gets a lot of money and friend with in a year', 'example': 'lucky him'}
+they: {'meaning': 'me', 'example': 'you'}
+miguel: {'meaning': 'insane', 'example': "that's miguel"}
+it : {'meaning': 'something ', 'example': 'what is it '}
+tom: {'meaning': 'he was my friend', 'example': 'where in myspace is tom now'}

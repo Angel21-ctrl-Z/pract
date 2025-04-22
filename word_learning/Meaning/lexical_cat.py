@@ -23,7 +23,7 @@ class LexicalCat(Definition):
         # Check if the lexical category is valid
         valid_categories = os.listdir(self.folder_path)
         valid_categories = [cat.lower() for cat in valid_categories if cat.endswith(".py") and cat != "__init__.py"]
-        print(f"Valid categories: {valid_categories}")
+        print(f"Valid categories: {valid_categories}\n")
 
         if self.lexical + ".py" in valid_categories:
             print(f"{self.lexical} is a valid lexical category.\n")
@@ -39,6 +39,7 @@ class LexicalCat(Definition):
                 funcat_class = self.lexical_list[self.lexical]
                 funcat = funcat_class()
                 funcat.create()
+                funcat.output()
             else:
                 print(f"{self.lexical} is not a valid functional category.\n")
     
